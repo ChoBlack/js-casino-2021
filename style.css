@@ -1,3 +1,7 @@
 .hidden {
   display: none;
 }
+
+#result2 {
+  font-weight: bolder;
+}

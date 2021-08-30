@@ -31,7 +31,7 @@ function showResult(guessNum, machineChoseNum){
     }
 
 
-    result1.innerHTML = `You chose: ${guessNum}, machine chose: ${machineChoseNum}`;
+    result1.innerHTML = `You chose: ${guessNum}, machine chose: ${machineChoseNum}.`;
     result2.innerHTML = `You ${finalresult}`;
     result1.classList.remove("hidden");
     result2.classList.remove("hidden");
