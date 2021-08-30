@@ -7,19 +7,23 @@ const result1 = document.querySelector("#result1");
 const result2 = document.querySelector("#result2");
 
 
+
 function setnumber(event){
     event.preventDefault();
-    console.log(generate.value);
-    console.log(guess.value);
 
-    showResult(generate.value, guess.value);
+    const guessNum = guess.value;
+    const machineChoseNum = Math.ceil(Math.random() * generate.value);
+    console.log(machineChoseNum);
+
+    showResult(guessNum, machineChoseNum);
 }
 
 
-function showResult(){
+function showResult(guessNum, machineChoseNum){
 
     let finalresult;
-    if(generate.value === guess.value){
+
+    if(guessNum == machineChoseNum){
         finalresult = `won!`;
     }
     else{
@@ -27,7 +31,7 @@ function showResult(){
     }
 
 
-    result1.innerHTML = `You chose: ${generate.value}, machine chose: ${guess.value}`;
+    result1.innerHTML = `You chose: ${guessNum}, machine chose: ${machineChoseNum}`;
     result2.innerHTML = `You ${finalresult}`;
     result1.classList.remove("hidden");
     result2.classList.remove("hidden");
